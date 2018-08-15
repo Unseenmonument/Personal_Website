@@ -1,0 +1,2 @@
+class WritingHelp < ApplicationRecord
+end
