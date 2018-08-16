@@ -1,0 +1,16 @@
+<%= simple_form_for @web do |f| %> 
+
+		    <div class='container'>
+		    	<div class="card">
+		    		<div class="container">
+					    
+					    <%= f.input :name, label: "First Name:  " %> 
+					    <%= f.input :contact, label: "Email Address:  " %>
+					            
+					    <div id='last_name'>
+					      <%= f.input :reason, label: "Reason: " %>
+					    </div>
+					</div>
+				</div>
+			</div>
+		<& end %>

@@ -4,6 +4,7 @@ class CreateFans < ActiveRecord::Migration[5.1]
       t.string :Name
       t.string :contact
       t.string :state
+      t.string :country
       t.string :comment
       t.string :book
       t.string :review

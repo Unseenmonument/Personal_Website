@@ -4,5 +4,6 @@ class HomeController < ApplicationController
 	end
 
 	def homepage
+		@web = Web_employers.new
 	end
 end
