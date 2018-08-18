@@ -1,18 +1,14 @@
-<%= simple_form_for @web do |f| %> 
-
+<%= simple_form_for @fan do |f| %> 
 		    <div class='container'>
 		    	<div class="card">
 		    		<div class="container">
-
-		  				<p>web design</p>
-					    
+		  				<p>Fan Response</p>    
 					    <%= f.input :name, label: "First Name:  " %> 
 					    <%= f.input :contact, label: "Email Address:  " %>
-					    <%= f.input :reason, label: "Reason: " %>
+					    <%= f.input :comment, label: "Comment: " %>
 					</div>
 				</div>
 			</div>
 <% end %>
 
-
-<p>why does this suck so very badly</p>
+<p>why does this suck so badly</p>

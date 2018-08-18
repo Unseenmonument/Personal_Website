@@ -1,9 +1,12 @@
 class HomeController < ApplicationController
 
 	def index
+		
 	end
 
 	def homepage
-		@web = Web_employers.new
+		@web = Webemployer.new
+		@fan = Fan.new
+		
 	end
 end
