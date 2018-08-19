@@ -16,10 +16,13 @@
 //= require popper
 //= require bootstrap
 //= require turbolinks
-//= reqire wedesign
+//= reqire webdesign
 //= require_tree .
 
 $( document ).ready(function() {
 
+	$('#render_fan').hide();
+	$('#render_web').hide();
+	$('#render_help').hide();
 	
 });

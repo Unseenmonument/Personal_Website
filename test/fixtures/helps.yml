@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  Name: MyString
+  company: MyString
   project: MyString
-  medium: MyString
   genre: MyString
-  comment: MyString
-  contact: MyString
   state: MyString
+  contact: MyString
+  comments: MyText
 
 two:
-  name: MyString
+  Name: MyString
+  company: MyString
   project: MyString
-  medium: MyString
   genre: MyString
-  comment: MyString
-  contact: MyString
   state: MyString
+  contact: MyString
+  comments: MyText

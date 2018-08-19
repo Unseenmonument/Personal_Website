@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   root 'home#homepage'
 
-  resources :home
+  resources :homes
+  resources :webemployers
+  resources :helps
+  resources :fans
 
 end

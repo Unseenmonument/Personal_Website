@@ -6,6 +6,7 @@ class HomeController < ApplicationController
 
 	def homepage
 		@web = Webemployer.new
+		@help = Help.new
 		@fan = Fan.new
 		
 	end
