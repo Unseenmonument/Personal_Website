@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180818180714) do
+ActiveRecord::Schema.define(version: 20180820172312) do
 
   create_table "fans", force: :cascade do |t|
     t.string "Name"
     t.string "contact"
     t.string "state"
-    t.string "comment"
     t.string "book"
     t.string "review"
     t.string "stars"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "comment"
   end
 
   create_table "helps", force: :cascade do |t|
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 20180818180714) do
     t.string "state"
     t.string "reason"
     t.string "contact"
-    t.string "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "comments"
   end
 
 end

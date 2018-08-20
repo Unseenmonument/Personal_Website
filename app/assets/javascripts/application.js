@@ -24,5 +24,23 @@ $( document ).ready(function() {
 	$('#render_fan').hide();
 	$('#render_web').hide();
 	$('#render_help').hide();
+
+	$('.creative').click(function(){
+		$('#render_help').toggle();
+		$('#render_fan').hide();
+		$('#render_web').hide();
+		});
+
+	$('.fan').click(function(){
+		$('#render_fan').toggle();
+		$('#render_web').hide();
+		$('#render_help').hide();
+		});
+
+	$('.webdesign').click(function(){
+		$('#render_web').toggle();
+		$('#render_fan').hide();
+		$('#render_help').hide();
+		});
 	
 });
