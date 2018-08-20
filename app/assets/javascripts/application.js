@@ -42,5 +42,17 @@ $( document ).ready(function() {
 		$('#render_fan').hide();
 		$('#render_help').hide();
 		});
+
+	$('.fan_submit').on('click', function{
+
+		$.ajax({
+			url: '/homepage',
+			type:'POST',
+			success: function(r){
+			}
+
+		});
+
+	});
 	
 });
