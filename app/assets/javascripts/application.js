@@ -43,8 +43,19 @@ $( document ).ready(function() {
 		$('#render_help').hide();
 		});
 
-	$('.fan_submit').on('click', function{
+	$('.fan_submit').click(function(){
+		$.ajax({
+			url: '/',
+			type:'POST',
+			success: function(r){
+				alert("This worked!");
+			}
 
+		});
+
+	});
+
+	$('.web_submit').click(function(){
 		$.ajax({
 			url: '/homepage',
 			type:'POST',
@@ -54,5 +65,16 @@ $( document ).ready(function() {
 		});
 
 	});
+
+	$('.help_submit').click(function(){
+		$.ajax({
+			url: '/homepage',
+			type:'POST',
+			success: function(r){
+			}
+
+		});
+
+	});	
 	
 });

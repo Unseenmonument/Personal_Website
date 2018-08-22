@@ -11,19 +11,34 @@ class HomeController < ApplicationController
 	end
 
 	def create
-		@web = Webemployer.new
-		@help = Help.new
-		@fan = Fan.new
+		@web = Webemployer.new(web_params)
+		@help = Help.new(help_params)
+		@fan = Fan.new(fan_params)
 
-		if @web.save && @help.save && @fan.save
-
-
+		if @web.save || @help.save || @fan.save
+			redirect_to root_path, notice: "Your Input Was Saved!"
+		else
+			redirect_to root_path, notice: "Your Input Was Not Saved!"
 		end
 
 
 	end
 
 	def destroy
+	end
+
+	private
+
+	def web_params
+		params.require(:web).permit(:company, :state, :reason, :contact)
+	end
+
+	def help_params
+		params.require(:help).permit(:Name , :company, :project, :genre, :state, :contact, :coments)
+	end
+
+	def fan_params
+		params.require(:fan).permit(:Name, :contact, :state, :book, :review, :stars)
 	end
 
 end
