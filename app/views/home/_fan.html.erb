@@ -1,19 +1,20 @@
 <%= simple_form_for( @fan, :method => :get, :remote => true) do |f| %> 
-		    <div class='container'>
-		    	<div class="card">
-		    		<div class="container">
+	    <div class='container'>
+	    	<div class="card">
+    			<div id="fan_form">
 		  				<p>Fan Response</p>    
 					    <%= f.input :Name, label: "First Name:  ", input_html: { :name => "name" } %> 
-					    <%= f.input :contact, label: "Email Address:  " %>
-					    <%= f.input :comment, label: "Leave A Comment: " %>
-					    <%= f.input :state, label: "Your Location: " %>
-					    <%= f.input :book, label: "Pick A Book: " %>
-					    <%= f.input :review, label: "Leave A Review: " %>
-					    <%= f.input :stars, label: "How many stars would you rate it? : " %>
+					    <%= f.input :contact, label: "Email Address:  ", input_html: { :name => "email" } %>
+					    <%= f.input :comment, label: "Leave A Comment: ", input_html: { :name => "comment" } %>
+					    <%= f.input :state, label: "Your Location: ", input_html: { :name => "state" } %>
+					    <%= f.input :book, label: "Pick A Book: ", input_html: { :name => "book" } %>
+					    <%= f.input :review, label: "Leave A Review: ", input_html: { :name => "review" } %>
+					    <%= f.input :stars, label: "How many stars would you rate it? : ", input_html: { :name => "stars" } %>
 
-					    <div class="fan_submit"><%= f.submit 'Submit Fan' %></div>
-					</div>
+					    <div class="fan_submit">
+					    	<button>'Submit Fan' </button>
+						</div>
 				</div>
 			</div>
+		</div>
 <% end %>
-

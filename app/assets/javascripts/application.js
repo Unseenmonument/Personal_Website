@@ -38,60 +38,64 @@ $( document ).ready(function() {
 		});
 
 	$('.webdesign').click(function(){
+		alert("doing this right");
 		$('#render_web').toggle();
 		$('#render_fan').hide();
 		$('#render_help').hide();
 		});
 
 	$('.fan_submit').click(function(){
-		$.ajax({
-			url: '/home/homepage',
-			type:'POST',
-			success: function(r){
-				alert("This worked!");
-			}
+		alert("doing this right");
 
-		});
-
-	});
-
-	$('.web_submit').click(function(){
-		$.ajax({
-			url: '/homepage',
-			type:'POST',
-			data: {
-				name: "Jane Doe"
-
-			},
-			success: function(r){
-
-				alert('works!');
-			}
+//		var form = $(this);
 
 //		event.preventDefault();
-//
-//	    var action = $(this).attr('action');
-//	    var method = $(this).attr('method');
-//
-//	    var description = $(this).find('#name').val();
-//
-//	    $.ajax({
-//	      method: method,
-//	      url: action,
-//	      data: { description: description, priority: priority }
+
+		var name = $("[name='name']").val();
+		var email = $("[name='email']").val();
+		var comment = $("[name='comment']").val();
+		var review = $("[name='review']").val();		
+		var stars = $("[name='stars']").val();
+		
+		var url = $(this).attr('action');
+		var method = $(this).attr('method');
+
+
+		$.ajax({
+			url: url,
+			type: method,
+			dataType: "text",
+			data: 
+//				form.serialize(),
+			{
+				name: name,
+				email: email,
+				comment: comment,
+				review: review,
+				stars: stars,
+
+			}, 
+			success: function(r){
+
+				alert('it works!');
+			}
+
 	    });
 
 	});
 
-	$('.help_submit').click(function(){
-		$.ajax({
-			url: '/homepage',
-			type:'POST',
-			success: function(r){
-			}
+	$('.fan_root').hover(function(){
+		
 
-		});
 
-	});	
+	});
+
+//	$.ajax({
+//			url: '/homepage',
+//			type:'POST',
+//			success: function(r){
+//			}
+//
+//		});	
 	
 });

@@ -15,13 +15,14 @@ class HomeController < ApplicationController
 		@help = Help.new(help_params)
 		@fan = Fan.new(fan_params)
 
-		if @web.save || @help.save || @fan.save
-			redirect_to root_path, notice: "Your Input Was Saved!"
-		else
-			redirect_to root_path, notice: "Your Input Was Not Saved!"
+		respond_to do |format|
+			if @web.save || @help.save || @fan.save
+				format.html { redirect_to root_path, notice: "Your Input Was Saved!" }
+				 
+			else
+				format.html { redirect_to root_path, notice: "Your Input Was Not Saved!" }
+			end
 		end
-
-
 	end
 
 	def destroy
