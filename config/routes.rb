@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'home#homepage'
 
+  get '/homepage' => 'home#homepage'
+
   resources :homes
   resources :webemployers
   resources :helps

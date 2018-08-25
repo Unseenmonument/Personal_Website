@@ -3,7 +3,7 @@
 		    	<div class="card">
 		    		<div class="container">
 		  				<p>Fan Response</p>    
-					    <%= f.input :Name, label: "First Name:  " %> 
+					    <%= f.input :Name, label: "First Name:  ", input_html: { :name => "name" } %> 
 					    <%= f.input :contact, label: "Email Address:  " %>
 					    <%= f.input :comment, label: "Leave A Comment: " %>
 					    <%= f.input :state, label: "Your Location: " %>

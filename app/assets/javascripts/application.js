@@ -45,7 +45,7 @@ $( document ).ready(function() {
 
 	$('.fan_submit').click(function(){
 		$.ajax({
-			url: '/',
+			url: '/home/homepage',
 			type:'POST',
 			success: function(r){
 				alert("This worked!");
@@ -59,10 +59,27 @@ $( document ).ready(function() {
 		$.ajax({
 			url: '/homepage',
 			type:'POST',
+			data: {
+				name: "Jane Doe"
+
+			},
 			success: function(r){
+
+				alert('works!');
 			}
 
-		});
+//		event.preventDefault();
+//
+//	    var action = $(this).attr('action');
+//	    var method = $(this).attr('method');
+//
+//	    var description = $(this).find('#name').val();
+//
+//	    $.ajax({
+//	      method: method,
+//	      url: action,
+//	      data: { description: description, priority: priority }
+	    });
 
 	});
 
