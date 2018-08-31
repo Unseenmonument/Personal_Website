@@ -32,4 +32,55 @@
 		<p>Contact me</p>
 		<p>This is the digital age, keeping in touch shouldn't be too hard. You can find me on these platforms</p>
 	</div>
+
+
+	<%= form_for @fan, remote: true do |f| %>
+	  <div class="form-group">
+	    <%= f.text_field :Name, placeholder: "What needs doing?" %>
+	  </div>
+
+	  <div class="form-group">
+	    <%= f.text_field :contact, placeholder: "Priority level?" %>
+	  </div>
+
+	  <div class="form-group">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+
+	<br>
+
+	<p>________________________________________</p>
+
+	<ul>
+	  <% @todo.each do |todo| %>  
+	    <li id="<%= todo.id %>">
+	      <%= todo.description %>
+	      <br>
+	      <strong>priority: </strong><%= todo.priority %><br>
+	    </li>
+	  <% end %>
+	</ul>
+
+	<p>________________________________________</p>
+
+	<ul>
+	  <%= render @todo  %>
+	</ul>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>

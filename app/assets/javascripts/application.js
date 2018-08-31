@@ -29,73 +29,38 @@ $( document ).ready(function() {
 		$('#render_help').toggle();
 		$('#render_fan').hide();
 		$('#render_web').hide();
-		});
+	});
 
 	$('.fan').click(function(){
 		$('#render_fan').toggle();
 		$('#render_web').hide();
 		$('#render_help').hide();
-		});
+	});
 
 	$('.webdesign').click(function(){
 		alert("doing this right");
 		$('#render_web').toggle();
 		$('#render_fan').hide();
 		$('#render_help').hide();
-		});
+	});
 
-	$('.fan_submit').click(function(){
-		alert("doing this right");
+	$('form').submit( function(){
+		event.preventDefault();
 
-//		var form = $(this);
+		var action = $(this).attr('action');
+	    var method = $(this).attr('method');
 
-//		event.preventDefault();
+	    var description = $(this).find('#todo_description').val();
+	    var priority = $(this).find('#todo_priority').val();
 
-		var name = $("[name='name']").val();
-		var email = $("[name='email']").val();
-		var comment = $("[name='comment']").val();
-		var review = $("[name='review']").val();		
-		var stars = $("[name='stars']").val();
-		
-		var url = $(this).attr('action');
-		var method = $(this).attr('method');
-
-
-		$.ajax({
-			url: url,
-			type: method,
-			dataType: "text",
-			data: 
-//				form.serialize(),
-			{
-				name: name,
-				email: email,
-				comment: comment,
-				review: review,
-				stars: stars,
-
-			}, 
-			success: function(r){
-
-				alert('it works!');
-			}
-
-	    });
+		.ajax(
+			method: method,
+		    url: '/create',
+		    data: { name: name, contact: contact }
+			);
 
 	});
 
-	$('.fan_root').hover(function(){
-		
-
-
-	});
-
-//	$.ajax({
-//			url: '/homepage',
-//			type:'POST',
-//			success: function(r){
-//			}
-//
-//		});	
+	
 	
 });

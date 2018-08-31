@@ -20,6 +20,7 @@ gem 'bootstrap', '~> 4.1.1'
 # gem 'bootstrap-sass', '~> 3.3.7'
 gem 'popper_js', '~> 1.12.9'
 gem 'simple_form'
+gem 'pry'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
