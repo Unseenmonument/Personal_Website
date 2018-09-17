@@ -14,12 +14,12 @@ Rails.application.routes.draw do
 
   get '/homepage' => 'home#homepage'
 
-  post '/create' => 'create#homepage'
+  post '/create' => 'home#create'
 
-  resources :homes
-  resources :webemployers
-  resources :helps
-  resources :fans
-  resources :todos
-
+  resources :homes do
+    resources :webemployers
+    resources :helps
+    resources :fans
+    resources :todos
+  end
 end

@@ -53,11 +53,12 @@ $( document ).ready(function() {
 	    var description = $(this).find('#todo_description').val();
 	    var priority = $(this).find('#todo_priority').val();
 
-		.ajax(
+
+		$.ajax({
 			method: method,
-		    url: '/create',
+		    url: action,
 		    data: { name: name, contact: contact }
-			);
+			});
 
 	});
 
