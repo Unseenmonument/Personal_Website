@@ -1,20 +1,22 @@
-class FanController < ApplicationController
-  def index
-  end
+class HelpsController < ApplicationController
 
-  def edit
+  def index
   end
 
   def new
   end
 
+  def show
+  end
+
+  def edit
+  end
+
   def create
-    @web = Webemployer.new(web_params)
     @help = Help.new(help_params)
-    @fan = Fan.new(fan_params)
 
     respond_to do |format|
-      if @web.save || @help.save || @fan.save
+      if @help.save
         format.html { redirect_to root_path, notice: "Your Input Was Saved!" }
          
       else
@@ -22,21 +24,11 @@ class FanController < ApplicationController
       end
     end
   end
-
-  def destroy
-  end
+	  
 
   private
 
-  def web_params
-    params.require(:web).permit(:company, :state, :reason, :contact)
-  end
-
   def help_params
     params.require(:help).permit(:Name , :company, :project, :genre, :state, :contact, :coments)
-  end
-
-  def fan_params
-    params.require(:fan).permit(:Name, :contact, :state, :book, :review, :stars)
   end
 end

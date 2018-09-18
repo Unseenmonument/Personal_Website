@@ -1,4 +1,4 @@
-<%= simple_form_for Fan.new, remote: true do |f| %> 
+<%= simple_form_for @fan, remote: true do |f| %> 
 	<p>Fan Response</p>    
     <%= f.input :Name, label: "First Name:  ", input_html: { :name => "name" } %> 
     <%= f.input :contact, label: "Email Address:  ", input_html: { :name => "email" } %>

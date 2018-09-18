@@ -8,13 +8,7 @@ Rails.application.routes.draw do
 
   get '/fan/new' => 'fan#new'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-  
-
   get '/homepage' => 'home#homepage'
-
-  post '/create' => 'home#create'
 
   resources :homes do
     resources :webemployers
@@ -22,4 +16,8 @@ Rails.application.routes.draw do
     resources :fans
     resources :todos
   end
+
+  resources :fans
+  resources :webemployers
+  resources :helps
 end

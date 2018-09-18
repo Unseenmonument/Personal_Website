@@ -6,13 +6,18 @@ class HomeController < ApplicationController
 
 	def homepage
 		@todo = Todo.all
+		
+		@webs = Webemployer.all
+		@helps = Help.all
+		@fans = Fan.all
+
 		@web = Webemployer.new
 		@help = Help.new
 		@fan = Fan.new
 	end
 
 	def create
-#		@web = Webemployer.new(web_params)
+		@web = Webemployer.new(web_params)
 #		@help = Help.new(help_params)
 		@fan = Fan.new(fan_params)
 #		@todo = Todo.create(todo_params)

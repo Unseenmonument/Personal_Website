@@ -36,11 +36,11 @@
 
 	<%= form_for @fan, remote: true do |f| %>
 	  <div class="form-group">
-	    <%= f.text_field :Name, placeholder: "What needs doing?" %>
+	    <%= f.text_field :Name, placeholder: "Fan name?" %>
 	  </div>
 
 	  <div class="form-group">
-	    <%= f.text_field :contact, placeholder: "Priority level?" %>
+	    <%= f.text_field :contact, placeholder: "Contact info?" %>
 	  </div>
 
 	  <div class="form-group">
@@ -52,12 +52,13 @@
 
 	<p>________________________________________</p>
 
+	<p>Something should be here: </p>
 	<ul>
-	  <% @todo.each do |todo| %>  
-	    <li id="<%= todo.id %>">
-	      <%= todo.description %>
+	  <% @webs.each do |web| %>  
+	    <li id="<%= web.id %>">
+	      <%= web.company %>
 	      <br>
-	      <strong>priority: </strong><%= todo.priority %><br>
+	      <strong>Comments: </strong><%= web.comments %><br>
 	    </li>
 	  <% end %>
 	</ul>
