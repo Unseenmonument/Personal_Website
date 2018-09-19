@@ -5,42 +5,28 @@ class HomeController < ApplicationController
 	end
 
 	def homepage
-		@todo = Todo.all
-		
-		@webs = Webemployer.all
-		@helps = Help.all
 		@fans = Fan.all
 
-		@web = Webemployer.new
-		@help = Help.new
 		@fan = Fan.new
 	end
 
 	def create
-		@web = Webemployer.new(web_params)
-#		@help = Help.new(help_params)
 		@fan = Fan.new(fan_params)
-#		@todo = Todo.create(todo_params)
-
-#		@web.save
-#		@help.save
+		
 		@fan.save
+		
 		binding.pry
 
 		respond_to do |format|			
 			format.html { redirect_to root_path }
-			format.js { }
 		end
 	end
 
-	def destroy
-
-	end
 
 	private
 
 	def web_params
-		params.require(:web).permit(:company, :state, :reason, :contact)
+		params.require(:webemployer).permit(:company, :state, :reason, :contact)
 	end
 
 	def help_params

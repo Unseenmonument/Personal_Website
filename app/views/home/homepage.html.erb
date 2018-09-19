@@ -19,11 +19,11 @@
 			</div>
 
 			<div id="render_web">
-				<%= render 'webdesign', web_employer: @web %>
+				
 			</div>
 
 			<div id="render_help">
-				<%= render 'help', help: @help %>
+				
 			</div>
 		</div>
 	
@@ -33,55 +33,40 @@
 		<p>This is the digital age, keeping in touch shouldn't be too hard. You can find me on these platforms</p>
 	</div>
 
-
-	<%= form_for @fan, remote: true do |f| %>
-	  <div class="form-group">
-	    <%= f.text_field :Name, placeholder: "Fan name?" %>
-	  </div>
-
-	  <div class="form-group">
-	    <%= f.text_field :contact, placeholder: "Contact info?" %>
-	  </div>
-
-	  <div class="form-group">
-	    <%= f.submit %>
-	  </div>
-	<% end %>
-
 	<br>
 
-	<p>________________________________________</p>
-
 	<p>Something should be here: </p>
-	<ul>
-	  <% @webs.each do |web| %>  
-	    <li id="<%= web.id %>">
-	      <%= web.company %>
+	<ul> Fans:
+	  <% @fans.each do |fan| %>  
+	    <li id="<%= fan.id %>">
+	      <%= fan.Name %>
 	      <br>
-	      <strong>Comments: </strong><%= web.comments %><br>
+	      <strong>Contact: </strong><%= fan.contact %><br>
 	    </li>
 	  <% end %>
 	</ul>
 
 	<p>________________________________________</p>
 
-	<ul>
-	  <%= render @todo  %>
-	</ul>
+<br>	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 </div>
