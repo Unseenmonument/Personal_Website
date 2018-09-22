@@ -18,7 +18,7 @@ class HomeController < ApplicationController
 		binding.pry
 
 		respond_to do |format|			
-			format.html { redirect_to root_path }
+			format.html { redirect_to homes_path }
 		end
 	end
 
